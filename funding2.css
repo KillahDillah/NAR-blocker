@@ -1,3 +1,5 @@
+
+
 .fc-pinned-message-container {
     display: flex; 
     flex-direction: column; 
@@ -8,13 +10,32 @@
     z-index: 2147483644; 
     -ms-transform: translate(-50%, 0%); 
     -webkit-transform: translate(-50%, 0%); 
-    transform: translate(-50%, 0%);}
+    transform: translate(-50%, 0%);
+    text-align: center;
+    /*background-image: url('./nan_flat_naf_masthead.png');
+    background-repeat: no-repeat;
+    background-size: 45em;
+    background-position: center;
+    background-position-x: 100px;
+    background-position-y: 85px;
+    background-blend-mode: difference;*/
+  }
 .fc-pinned-message {
 
 }
 
+img {
+  mix-blend-mode: difference;
+  position: absolute;
+  width: 950px;
+  /* width: 100%; */
+  opacity: 0.2;
+  /*position: fixed;*/
+  left: 23px;
+}
+
 .fc-pinned-alert {
-    text-align: center;
+    
 }
 
 .fc-pinned-header {
@@ -94,15 +115,13 @@
 
 }
 
-.fc-pinned-message-container i:hover {
+.fc-pinned-message-container i:hover, .fc-actions div a:hover {
     color: rgb(198,84,90);
 }
 
-.fc-pinned-message {
-}
 .fc-pinned-header {
   font-size: 1.6em;
-  font-weight: 500;
+  /*font-weight: 500;*/
 }
 .fc-pinned-text {
   font-size: 1.2em;
@@ -152,4 +171,28 @@
   margin-right: 1.5em;
 }
 .fc-close {
+}
+
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v31/2fcrYFNaTjcS6g4U3t-Y5UEw0lE80llgEseQY3FEmqw.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
 }
