@@ -24,10 +24,10 @@
   background-position-y: 94px; 
   mix-blend-mode: difference;
   opacity: 0.12;
-  top: -141px;
-  left: -101px;
-  bottom: -184px;
-  right: -30px;
+  top: -175px;
+  left: -80px;
+  bottom: -185px;
+  right: -80px;
   position: fixed;
   z-index: -1; 
   transform: rotate(-30deg);
@@ -104,6 +104,8 @@ img {
 .fc-link-parent {
   text-align: center;
   display: block;
+  border-radius: .3em;
+  background-color: lightgray;
 }
 
 .fc-close {
@@ -131,7 +133,7 @@ i:hover {
   color: rgb(198,84,90);
 }
 
-.fc-link:hover {
+.fc-link-parent:hover {
   background-color: gray;
 }
 
@@ -157,6 +159,9 @@ i:hover {
 .fc-pinned-text {
   font-size: 1.2em;
   margin-top: 0;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 0.5em;
 }
 .fc-native-message-container {
@@ -198,9 +203,8 @@ i:hover {
 .fc-link {
   font-size: 1.2em;
   font-weight: 700;
-  border-radius: .3em;
+  
   padding: 7px 22px;
-  background-color: lightgray;
   color: black;
   position: relative;
 }
@@ -231,9 +235,10 @@ i:hover {
 
 
 #small {
-  font-size: 0.5em;
+  font-size: 0.6em;
   margin-bottom: 0px;
   margin-top: 20px;
+
 }
 
 #small a {
@@ -250,10 +255,49 @@ i:hover {
 @media screen and (max-width: 599px) {
   
   body, span {
-    font-size: 0.7em;
+    font-size: smaller;
   }
   .fc-pinned-message-container {
     width: 25em;
+    max-width: 65%;
+  }
+  .fc-pinned-text {
+    font-size: 1em;
+    width: 100%;
+  }
+  .fc-pinned-message {
+    width: 100%;
+  }
+  #small {
+    font-size: 0.5em;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 1099px) {
+  
+  .fc-pinned-message-container {
+    width: 25em;
+    max-width: 65%;
+  }
+  .fc-pinned-message {
+    width: 100%;
+  }
+
+  #small {
+    width: 70%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.7em;
+  }
+  .fc-pinned-text {
+    font-size: 1em;
   }
 
 }
