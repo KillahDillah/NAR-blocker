@@ -18,10 +18,10 @@
 
 .fc-pinned-message-container:after{
   content: "";
-  background-image: url("nan_flat_naf_masthead copy.png");
+  background: url("nan_flat_naf_masthead copy.png");
   background-size: 15em;
-   background-position-x: 94px; 
-   background-position-y: 94px; 
+  background-position-x: 94px; 
+  background-position-y: 94px; 
   mix-blend-mode: difference;
   opacity: 0.12;
   top: -141px;
@@ -29,8 +29,10 @@
   bottom: -184px;
   right: -30px;
   position: fixed;
-   z-index: -1; 
+  z-index: -1; 
   transform: rotate(-30deg);
+  animation: animate_background 15s linear alternate infinite;
+  min-height: 100vh; 
 }
 
 img {
@@ -113,7 +115,7 @@ img {
 
 .fc-pinned-message-container {
   border-radius: .25em;
- /* width: 45em;*/
+  width: 45em;
   max-width: 80%;
   background-color: rgb(248, 248, 248);
   padding: 1.15em 1.5em 1.5em 1.5em;
@@ -125,28 +127,27 @@ img {
   margin: auto;
 }
 
-i:hover, a:hover {
+i:hover {
   color: rgb(198,84,90);
 }
 
-a:hover {
+.fc-link:hover {
   background-color: gray;
 }
 
+/*.fc-link:after{
+  background-color: lightgray;
+  opacity: 0.5;
+}*/
+
 .line {
   text-align: center;
-  border-bottom: 1px solid #000;
   line-height: .1em;
   font-size: 19px;
   font-style: italic;
   width: 70%;
   color: #000;
   margin: 1em auto;
-}
-
-.line span {
-  background: rgb(248, 248, 248);
-  padding: 0 10px;
 }
 
 .fc-pinned-header {
@@ -200,7 +201,7 @@ a:hover {
   border-radius: .3em;
   padding: 7px 22px;
   background-color: lightgray;
-  color: rgb(198,84,90);
+  color: black;
   position: relative;
 }
 
@@ -228,8 +229,39 @@ a:hover {
   -webkit-font-smoothing: antialiased;
 }
 
+
 #small {
   font-size: 0.5em;
   margin-bottom: 0px;
   margin-top: 20px;
 }
+
+#small a {
+  text-decoration-line: none;
+  color: rgb(198,84,90); 
+}
+
+#small a:hover {
+  color: gray;
+}
+
+/*Responsive Nav*/
+
+@media screen and (max-width: 599px) {
+  
+  body, span {
+    font-size: 0.7em;
+  }
+  .fc-pinned-message-container {
+    width: 25em;
+  }
+
+}
+
+@-webkit-keyframes animate_background { 
+    from { 
+        background-position: 0 0;
+    } 
+    to { 
+        background-position: 0 -200px;
+    }
