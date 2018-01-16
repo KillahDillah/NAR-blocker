@@ -1,5 +1,8 @@
 
-
+body {
+  font-family: 'Open Sans',sans-serif!important;
+  font-size: 0.9em;
+}
 .fc-pinned-message-container {
   display: flex; 
   flex-direction: column; 
@@ -16,7 +19,7 @@
   margin-top: 100px;
 }
 
-.fc-pinned-message-container:after{
+/*.fc-pinned-message-container:after{
   content: "";
   background: url("nan_flat_naf_masthead copy.png");
   background-size: 15em;
@@ -33,16 +36,17 @@
   transform: rotate(-30deg);
   animation: animate_background 15s linear alternate infinite;
   min-height: 100vh; 
-}
+}*/
 
 img {
-  mix-blend-mode: difference;
+  height: 50px;
+  /*mix-blend-mode: difference;
   position: absolute;
-  width: 950px;
+  width: 950px;*/
   /* width: 100%; */
-  opacity: 0.2;
+  /*opacity: 0.2;*/
   /*position: fixed;*/
-  left: 23px;
+  /*left: 23px;*/
 }
 
 .fc-pinned-header {
@@ -100,6 +104,7 @@ img {
 }
 .fc-actions div a {
     text-decoration: none;
+    display: block;
 }
 .fc-link-parent {
   text-align: center;
@@ -125,7 +130,7 @@ img {
 }
 
 .fc-pinned-message {
-  width: 70%;
+  /*width: 70%;*/
   margin: auto;
 }
 
@@ -134,7 +139,11 @@ i:hover {
 }
 
 .fc-link-parent:hover {
-  background-color: gray;
+  background-color: rgb(50, 50, 50);
+
+}
+.fc-link:hover {
+  color: rgb(198,84,90);
 }
 
 /*.fc-link:after{
@@ -145,8 +154,6 @@ i:hover {
 .line {
   text-align: center;
   line-height: .1em;
-  font-size: 19px;
-  font-style: italic;
   width: 70%;
   color: #000;
   margin: 1em auto;
@@ -159,7 +166,7 @@ i:hover {
 .fc-pinned-text {
   font-size: 1.2em;
   margin-top: 0;
-  width: 90%;
+  /*width: 80%;*/
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0.5em;
@@ -198,12 +205,11 @@ i:hover {
   padding-top: 0.4em;
   padding-bottom: 0.4em;
   margin: auto;
+  /*text-transform: uppercase;*/
 }
 
 .fc-link {
   font-size: 1.2em;
-  font-weight: 700;
-  
   padding: 7px 22px;
   color: black;
   position: relative;
@@ -263,16 +269,13 @@ i:hover {
   }
   .fc-pinned-text {
     font-size: 1em;
-    width: 100%;
+    width: 80%;
   }
-  .fc-pinned-message {
-    width: 100%;
-  }
+  
   #small {
     font-size: 0.5em;
     margin-bottom: 0px;
     margin-top: 10px;
-    width: 65%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -290,7 +293,6 @@ i:hover {
   }
 
   #small {
-    width: 70%;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -298,6 +300,7 @@ i:hover {
   }
   .fc-pinned-text {
     font-size: 1em;
+    width: 80%;
   }
 
 }
